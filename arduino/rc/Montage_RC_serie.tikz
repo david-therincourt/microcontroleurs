@@ -1,0 +1,28 @@
+\ctikzset{voltage=european, resistor=european}
+\ctikzset { bipoles/thickness=1}
+
+\tikzset{meter/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
+
+\def\tensionv[#1,#2,#3][#4,#5](#6)(#7){%
+	\draw[thick,#3]([shift={(#5,#4)}]#6)--node[#2]{#1}([shift={(#5,-#4)}]#7);}
+%	\tensionv[label,position,<-][retrait,decalage](coord)(coord)
+\def\tensionh[#1,#2,#3][#4,#5](#6)(#7){%
+	\draw[thick,#3]([shift={(#4,#5)}]#6)--node[#2]{#1}([shift={(-#4,#5)}]#7);}
+%	\tensionh[label,position,<-][retrait,decalage](coord)(coord)
+
+\begin{circuitikz}[scale=1,>=triangle 45]
+	\shorthandoff{:;!?}
+	%\draw[cyan,step=10mm,thin]               (0cm,0cm) grid (8cm,8cm);
+	\draw[thick]
+		(0,3)	
+		to [R,l_=$R$] (4,3)
+		to [C,l_=$C$] (4,0)
+		to (0,0);
+
+	%\tensionh[$u_R$,above,<-][0.5,0.5](0,3)(4,3)	
+	\tensionv[$u_C(t)$,right,->][0.3,0.7](4,0)(4,3)
+	\tensionv[$e(t)$,right,->][0.3,0.](0,0)(0,3)
+
+
+\end{circuitikz}
+
