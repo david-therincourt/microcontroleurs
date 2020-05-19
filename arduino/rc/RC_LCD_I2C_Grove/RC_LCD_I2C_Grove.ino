@@ -5,7 +5,7 @@
 #include <Wire.h>       // Importation librairie gestion port I2C
 #include "rgb_lcd.h"    // Importation librairie gestion afficheur LCD I2C Grove
 
-#define pinE 8
+#define pinE A1
 
 float R = 10;    // Resistance kOhm
 int N = 0;

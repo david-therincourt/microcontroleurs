@@ -6,11 +6,11 @@ Programmes en Arduino classique (langage C/C++).
 
 ## Arduino Nanpy
 
-Pilotage d'un Arduino en langage Python à partir d'un ordinateur (par le port série).
+Interfaçage d'un Arduino en langage Python à partir d'un ordinateur (port série).
 
 ## ESP32
 
-Microcontrôleurs ESP32 (bas prix chinois) programmable directement en Python (MicroPython).
+Microcontrôleurs ESP32 (low cost) programmable directement en Python (MicroPython).
 
 https://fr.wikipedia.org/wiki/ESP32
 
@@ -18,13 +18,13 @@ http://docs.micropython.org/en/latest/esp32/quickref.html
 
 ## ESP32 M5Stack
 
-Microcontrôleur ESP32 monté dans un boitier avec 1 écran, 3 bouttons, Bluetooth, Wifi et divers ports de connexion. 
+Microcontrôleur ESP32 monté dans un boîtier avec 1 écran, 3 boutons, Bluetooth, Wifi et divers ports de connexion.  Programmable sous MicroPython.
 
 https://m5stack.com/
 
 ## Micro:bit
 
-Microcontrôleur (bas prix) avec les mêmes caractéristiques qu'un Arduino UNO programmable en Python (MicroPython)
+Microcontrôleur avec les mêmes caractéristiques qu'un Arduino UNO programmable en Python (MicroPython). Moins performant que les autres cartes compatible MicroPython.
 
 https://microbit-micropython.readthedocs.io/en/latest/index.html
 
@@ -36,11 +36,15 @@ http://docs.micropython.org/en/latest/pyboard/quickref.html
 
 ## Adafruit STM32 Feather Express (STM32F405)
 
-Microcontrôleur performant programmable en MicroPython. 
+Idem PyBoard au format Feather d’Adafruit.
+
+[https://www.adafruit.com/product/4382](https://www.adafruit.com/product/4382)
 
 ## Nucleo F4 (STM32F4xx)
 
- Microcontrôleur performant programmable en MicroPython. 
+ Microcontrôleur performant de STMicroelectronics programmable en MicroPython. 
+
+[https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html)
 
 
 

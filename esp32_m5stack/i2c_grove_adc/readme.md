@@ -1,5 +1,7 @@
 # Grove ADC I2C (ADC121C021)
 
+Attention, un pont diviseur de tension (1/2) composée de 2 résistances 10k (1%) est présent à l'entrée. Ce qui pose des problèmes de chute de tension pour certains capteurs (ex. CTN)
+
 ## Port I2C
 
 
