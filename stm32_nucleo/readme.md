@@ -1,6 +1,6 @@
 # Nucleo 64 et MicroPython
 
-<img src="/home/david/PRO/Github/microcontroleurs/stm32_nucleo/nucleo_F401RE.jpg" style="zoom:50%;" />
+<img src="nucleo_F401RE.jpg" style="zoom:50%;" />
 
 Tester sur [NUCLEO-F401RE](https://www.st.com/en/evaluation-tools/nucleo-f401re.html).
 
@@ -140,4 +140,4 @@ lcd.setCursor(0,1)     # Déplace le curseur
 lcd.print("Nucleo")    # Ecrit un texte à l'emplacement du curseur
 ```
 
-Ne pas oublier de copier la librairie `grove_lcd.py` dans  la mémoire flash de la carte  à côté des fichiers `boot.py` et `main.py` .
+Ne pas oublier de copier la librairie `grove_lcd.py` (voir répertoire `i2c`) dans  la mémoire flash de la carte  à côté des fichiers `boot.py` et `main.py` .
