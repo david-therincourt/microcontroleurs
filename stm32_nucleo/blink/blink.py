@@ -1,7 +1,7 @@
-from pyb import LED
+from pyb import LED, Pin
 from time import sleep_ms
 
-led = LED(1)
+led = Pin("LED_BLUE")
 
 while True :
     led.on()

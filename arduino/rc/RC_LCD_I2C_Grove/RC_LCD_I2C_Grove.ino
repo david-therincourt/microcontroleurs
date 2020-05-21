@@ -7,7 +7,7 @@
 
 #define pinE A1
 
-float R = 10;    // Resistance kOhm
+float R = 100;    // Resistance kOhm
 int N = 0;
 unsigned long t0;
 unsigned long t1;
