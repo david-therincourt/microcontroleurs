@@ -2,6 +2,8 @@
 
 Librairie MicroPython pour  module [Grove I2C ADC V1.2](https://wiki.seeedstudio.com/Grove-I2C_ADC/) de SeeedStudio.
 
+Convertisseur analogique-numérique (12 bits) I2C compatible 3,3 V et 5 V.
+
 ## Installation
 
 Copier le fichier `grove_adc.py`  dans la mémoire flash du microcontrôleur. Dans le même répertoire que les fichiers `boot.py` et `main.py`.
