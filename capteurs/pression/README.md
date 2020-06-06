@@ -1,0 +1,74 @@
+# Capteurs de pression
+
+Capteurs de pression compatibles 3,3 VDC.
+
+## Capteurs de pression absolue
+
+### Analogique
+
+### I2C
+
+#### Adafruit MPRLS (3 à 5 V)
+
+<img src="MPRLS/Adafruit_MPRLS.png" alt="Adafruit_MPRLS" style="zoom:50%;" />
+
+* Fabricant : Adafruit
+* Capteur : Honeywell MPRLS0025PA00001A (calibré et compensé)
+* Pression de fonctionnement : 0  à 25 PSI (0 à 170 kPa)
+* Précision : 1,5% (10% à 90% de 25 PSI)
+* Résolution :  24 bit
+* Adresse : 0x18
+* Tension d'alimentation de fonctionnement : 3,3 VDC (3 à 5 V) 
+* Prix approximatif :  16,80 € ([Lextronic](https://www.lextronic.fr/module-capteur-de-pressions-mprls-40627.html))
+
+
+
+#### HSCDANN030PA2A3 (3,3 V)
+
+<img src="HSCDANN030PA2A3/HSCDANN030PA2A3.png" alt="HSCDANN030PA2A3" style="zoom: 25%;" />
+
+* Fabricant : Honeywell
+* Pression de fonctionnement : 0  à 30 PSI (0 à 200 kPa)
+* Précision : 1%  (10% à 90% de 30 PSI)
+* Résolution : 14 bit
+* Package/Boîte : DIP-8
+* Tension d'alimentation de fonctionnement : 3,3 VDC (3 à 3.6 V) 
+* Prix approximatif : 32 € ([Mouser](https://eu.mouser.com/ProductDetail/Honeywell/HSCDANN030PA2A3?qs=pcUO8jIlt0a2xNetHRJOJw%3D%3D))
+
+
+
+## Capteurs de pression différentielle
+
+### Analogique
+
+#### MP3V5004DP (3 V)
+
+<img src="MP3V50xxDP/MP3V5004DP.png" alt="MP3V5004DP" style="zoom: 33%;" />
+
+* Fabricant: NXP
+
+* Pression de fonctionnement : 0 kPa à 3,92 kPa (400 mm H20)
+* Précision : 1.5 %, 2.5 %
+
+* Tension de sortie : 0.6 V à 3 V
+* Boîtier : case 1351-01 (pas 2.54 mm)
+* Tension d'alimentation de fonctionnement : 3 VDC (2,7 à 3,3 V)
+* Prix approximatif : 12 € ([Mouser](https://eu.mouser.com/ProductDetail/nxp/mp3v5004dp/?qs=3b6%2Fl7XffK%2FxZ9yD68Y6nw%3D%3D&countrycode=DE&currencycode=EUR))
+
+
+
+### I2C
+
+
+
+#### SM9541-040C-D-C-3-S (3,3 V)
+
+<img src="SM9541-040C-D-C-3-S/SM9541-100C-D-C-3-S.png" alt="SM9541-100C-D-C-3-S" style="zoom: 25%;" />
+
+* Fabriquant : SMI
+* Pression de fonctionnement : 0 à 40 kPa (40 cm H2O)
+* Précision : 1 %
+* Résolution : 14 bit
+* Boîtier : SOIC-16 (pas 1,27 mm)
+* Tension d’alimentation : 3 à 3,6 VDC
+* Prix approximatif : 20 € ([Mouser](https://eu.mouser.com/ProductDetail/Silicon-Microstructures-Inc/SM9541-040C-D-C-3-S?qs=emHYq6U3k7K%252BUZWdl6JjEQ==))

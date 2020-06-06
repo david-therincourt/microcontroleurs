@@ -1,0 +1,15 @@
+Entrez la temperature T1 du premier point (en degres Celsius) : 2.4
+et la resistance R1 du premier point (en ohms) : 25455
+	----------------------------------
+Entrez la temperature T2 du deuxieme point (en degres Celsius) : 25
+et la resistance R2 du deuxieme point(en ohms) : 10475
+	----------------------------------
+Entrez la temperature T3 du troisieme point (en degres Celsius) : 80
+et la resistance R3 du troisieme point (en ohms) : 1658
+	 ###################################################################
+Dans l'equation 1/T = A + B*ln R + C*(ln R)^3 on sait désormais que :
+	 ###################################################################
+Le coefficient A vaut  0.001143952211893554
+Le coefficient B vaut  0.00020781488677549018
+Le coefficient C vaut  3.610431553846086e-07
+

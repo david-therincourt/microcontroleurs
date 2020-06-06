@@ -7,8 +7,9 @@
 
 #define pinE A1
 
-float R = 100;    // Resistance kOhm
+float R = 99.3;    // Resistance kOhm
 int N = 0;
+int i = 0;
 unsigned long t0;
 unsigned long t1;
 unsigned long tau;
@@ -25,6 +26,7 @@ void setup() {
   digitalWrite(pinE,HIGH);
   t0 = micros();
   while (N<646) {      // Seuil = 0,632*1023 = 646
+    i = i+1;
     N=analogRead(A0);
   }
   t1 = micros();
@@ -32,13 +34,13 @@ void setup() {
   tau = t1 - t0;
   C = tau/R;
   lcd.setCursor(0, 0); 
-  lcd.print(tau);
-  lcd.setCursor(8, 0); 
-  lcd.print(" us");
+  lcd.print(i);
+  lcd.setCursor(13, 0); 
+  lcd.print("pts");
   lcd.setCursor(0, 1); 
   lcd.print(C);
-  lcd.setCursor(8, 1); 
-  lcd.print(" nF");
+  lcd.setCursor(13, 1); 
+  lcd.print("nF");
   delay(1000);
 
 }
