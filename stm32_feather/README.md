@@ -99,7 +99,7 @@ Pour plus de précision, la tension Vcc a été mesurée au voltmètre.
 
 ### Port I2C
 
-Port I2C présent sur les broches D14 et D15 de la connectique Arduino ou sur le connecteur I2C du [shield Grove](https://wiki.seeedstudio.com/Base_Shield_V2/) compatible Arduino (Attention : mettre le commutateur sur 3,3 V).
+Port I2C présent sur les broches SCL et SDA.
 
 #### Recherche des périphériques
 
