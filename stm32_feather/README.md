@@ -1,23 +1,15 @@
-# Nucleo 64 et MicroPython
+# STM32F405 Feather Express
 
-<img src="nucleo_F401RE.jpg" style="zoom:50%;" />
 
-Tester sur [NUCLEO-F401RE](https://www.st.com/en/evaluation-tools/nucleo-f401re.html).
 
 ## Firmware MicroPython
 
-* Téléchargement du firmware sur le site officiel de MicroPython :
-
-  [https://micropython.org/download/stm32/](https://micropython.org/download/stm32/)
-
-* Installation du firmware sur la carte :
-
-  [MicroPython sur NUCLEO-F411RE](https://www.diveinembedded.com/2019/04/micropython-sur-nucleo-f411re.html)
+[https://learn.adafruit.com/adafruit-stm32f405-feather-express/micropython-setup](https://learn.adafruit.com/adafruit-stm32f405-feather-express/micropython-setup)
 
 ## Connexion au REPL
 
 ```python
-MicroPython v1.12 on 2019-12-20; NUCLEO-F401RE with STM32F401xE
+MicroPython v1.11-387-ga069340c1-dirty on 2019-10-03; Feather STM32F405 with STM32F405RG
 Type "help()" for more information.
 >>> 
 ```
@@ -35,17 +27,17 @@ Pour connaître le nom des broches de la Nucleo :
 ```python
 >>> from pyb import Pin
 >>> dir(Pin.board)
-['__class__', '__name__', '__bases__', 'A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'D0', 'D1', 'D10', 'D11', 'D12', 'D13', 'D14', 'D15', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'D9', 'LED_BLUE', 'LED_GREEN', 'LED_ORANGE', 'LED_RED', 'PA0', 'PA1', 'PA10', 'PA11', 'PA12', 'PA15', 'PA2', 'PA3', 'PA4', 'PA5', 'PA6', 'PA7', 'PA8', 'PA9', 'PB0', 'PB1', 'PB10', 'PB12', 'PB13', 'PB14', 'PB15', 'PB2', 'PB3', 'PB4', 'PB5', 'PB6', 'PB7', 'PB8', 'PB9', 'PC0', 'PC1', 'PC10', 'PC11', 'PC12', 'PC13', 'PC14', 'PC15', 'PC2', 'PC3', 'PC4', 'PC5', 'PC6', 'PC7', 'PC8', 'PC9', 'PD2', 'PH0', 'PH1', 'SW']
+['__class__', '__name__', 'A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'BATTERY_MONITOR', 'BOOT1', 'D0', 'D1', 'D10', 'D11', 'D12', 'D13', 'D5', 'D6', 'D8', 'D9', 'FLASH_CS', 'FLASH_MISO', 'FLASH_MOSI', 'FLASH_SCK', 'MISO', 'MOSI', 'NC_A0', 'NC_A1', 'NC_A2', 'NEOPIXEL', 'RX', 'SCK', 'SCL', 'SDA', 'SD_CK', 'SD_CMD', 'SD_D0', 'SD_D1', 'SD_D2', 'SD_D3', 'SD_DETECT', 'SWCLK', 'SWDIO', 'TX', 'USB_DM', 'USB_DP', 'USB_ID', 'USB_VBUS']
 ```
 
-Pour le brochage Arduino :
 
-* Entrées/sorties digitales de `"D0"`  à `"D15"`.
+
+* Entrées/sorties digitales de `"D0"`  à `"D13"`.
 * Entrées analogiques  de `"A0"`  à `"A5"`.
 
 ### Led utilisateur
 
-La carte NUCLEO-F401RE possède une led utilisateur de couleur verte (LD2).
+La carte possède une led utilisateur de couleur rouge (LED1).
 
 ```python
 >>> from pyb import LED
@@ -59,7 +51,7 @@ La carte NUCLEO-F401RE possède une led utilisateur de couleur verte (LD2).
 
 ```python
 >>> from pyb import Pin
->>> pin = Pin('D8', Pin.OUT_PP) # Pin.OUT_PP pour sortie "classique" (push-pull)
+>>> pin = Pin('D11', Pin.OUT_PP) # Pin.OUT_PP pour sortie "classique" (push-pull)
 >>> pin.on()                    # Etat haut
 >>> pin.off()                   # Etat bas
 ```
@@ -70,15 +62,15 @@ Lecture de niveau logique :
 
 ```python
 >>> from pyb import Pin
->>> pin = Pin('D8', Pin.IN)        # Pin en entrée "classique"
->>> pin.value()                    # Lecture état
+>>> pin = Pin('D11', Pin.IN)        # Pin en entrée "classique"
+>>> pin.value()                     # Lecture état
 ```
 
 Activer la résistance interne de tirage vers le haut (ex. bouton poussoir) :
 
 ```python
 >>> from pyb import Pin
->>> pin = Pin('D8', Pin.IN, Pin.PULL_UP)  # Pin en entrée avec tirage vers le haut
+>>> pin = Pin('D11', Pin.IN, Pin.PULL_UP)  # Pin en entrée avec tirage vers le haut
 >>> pin.value()                           # Lecture état
 ```
 
@@ -135,7 +127,7 @@ lcd = Lcd(i2c,16,2)             # Afficheur LCD 16x2
 lcd.clear()            # Efface l'écran
 lcd.print("Bonjour")   # Ecrit un texte à l'emplacement du curseur
 lcd.setCursor(0,1)     # Déplace le curseur
-lcd.print("Nucleo")    # Ecrit un texte à l'emplacement du curseur
+lcd.print("Feather")   # Ecrit un texte à l'emplacement du curseur
 ```
 
 Ne pas oublier de copier la librairie `grove_lcd.py` (voir répertoire `i2c`) dans  la mémoire flash de la carte  à côté des fichiers `boot.py` et `main.py` .

@@ -7,7 +7,7 @@
 from machine import I2C
 from grove_lcd import Lcd    # Librairie pour Grove I2C LCD V1.2
 
-i2c = I2C(1)           # Premier port I2C
+i2c = I2C(scl="SCL", sda="SDA") # Port I2C
 lcd = Lcd(i2c,16,2)    # Afficheur LCD 16x2
 
 lcd.clear()            # Efface l'écran

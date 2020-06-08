@@ -10,12 +10,13 @@ Capteurs de pression compatibles 3,3 VDC.
 
 #### Adafruit MPRLS (3 à 5 V)
 
-<img src="MPRLS/Adafruit_MPRLS.png" alt="Adafruit_MPRLS" style="zoom:50%;" />
+![Adafruit_MPRLS.resized](MPRLS/adafruit_MPRLS.png)
 
 * Fabricant : Adafruit
 * Capteur : Honeywell MPRLS0025PA00001A (calibré et compensé)
 * Pression de fonctionnement : 0  à 25 PSI (0 à 170 kPa)
 * Précision : 1,5% (10% à 90% de 25 PSI)
+* Diamètre tube : 2,5 mm
 * Résolution :  24 bit
 * Adresse : 0x18
 * Tension d'alimentation de fonctionnement : 3,3 VDC (3 à 5 V) 
@@ -25,11 +26,12 @@ Capteurs de pression compatibles 3,3 VDC.
 
 #### HSCDANN030PA2A3 (3,3 V)
 
-<img src="HSCDANN030PA2A3/HSCDANN030PA2A3.png" alt="HSCDANN030PA2A3" style="zoom: 25%;" />
+![HSCDANN030PA2A3](HSC/HSCDANN030PA2A3.png)
 
 * Fabricant : Honeywell
 * Pression de fonctionnement : 0  à 30 PSI (0 à 200 kPa)
 * Précision : 1%  (10% à 90% de 30 PSI)
+* Diamètre tube : 4,93 mm
 * Résolution : 14 bit
 * Package/Boîte : DIP-8
 * Tension d'alimentation de fonctionnement : 3,3 VDC (3 à 3.6 V) 
@@ -43,13 +45,12 @@ Capteurs de pression compatibles 3,3 VDC.
 
 #### MP3V5004DP (3 V)
 
-<img src="MP3V50xxDP/MP3V5004DP.png" alt="MP3V5004DP" style="zoom: 33%;" />
+![MP3V5004DP](MP3V50xxDP/MP3V5004DP.png)
 
 * Fabricant: NXP
-
 * Pression de fonctionnement : 0 kPa à 3,92 kPa (400 mm H20)
 * Précision : 1.5 %, 2.5 %
-
+* Diamètre tube : 3,3 mm
 * Tension de sortie : 0.6 V à 3 V
 * Boîtier : case 1351-01 (pas 2.54 mm)
 * Tension d'alimentation de fonctionnement : 3 VDC (2,7 à 3,3 V)
@@ -59,15 +60,16 @@ Capteurs de pression compatibles 3,3 VDC.
 
 ### I2C
 
+#### SM9541
+
+![SM9541-100C-D-C-3-S](SM9541/SM9541-100C-D-C-3-S.png)
 
 
-#### SM9541-040C-D-C-3-S (3,3 V)
-
-<img src="SM9541-040C-D-C-3-S/SM9541-100C-D-C-3-S.png" alt="SM9541-100C-D-C-3-S" style="zoom: 25%;" />
 
 * Fabriquant : SMI
 * Pression de fonctionnement : 0 à 40 kPa (40 cm H2O)
 * Précision : 1 %
+* Diamètre tube : 3 mm
 * Résolution : 14 bit
 * Boîtier : SOIC-16 (pas 1,27 mm)
 * Tension d’alimentation : 3 à 3,6 VDC

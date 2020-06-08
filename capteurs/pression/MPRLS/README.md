@@ -4,7 +4,7 @@
 
 Capteur numérique I2C de pression absolue [Adafruit MPRLS](https://www.adafruit.com/product/3965) (0-25 PSI)
 
-![adafruit_MPRLS](images/adafruit_MPRLS.png)
+![adafruit_MPRLS](adafruit_MPRLS.png)
 
 
 

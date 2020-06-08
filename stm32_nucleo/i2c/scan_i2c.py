@@ -1,4 +1,4 @@
 from machine import I2C
 
-i2c = I2C(1)
+i2c = I2C(scl="SCL", sda="SDA") # Port I2C
 print(i2c.scan())

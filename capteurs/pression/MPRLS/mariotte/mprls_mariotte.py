@@ -1,6 +1,6 @@
 # Loi de Mariotte
 # Capteur de pression absolue Adafruit MPRLS
-# 0 - 25 PSI (0.25% pleine échelle)
+# 0 - 25 PSI 
 # Seringue 20 mL
 # David THERINCOURT - 05/2020
 
@@ -17,7 +17,7 @@ P = []
 # Mesures
 for vol in V :
     input("Regler le volume sur : " + str(vol) + " mL")
-    pression = mprls.pressure()   # Mesure en hPa
+    pression = mprls.read_hPa()   # Mesure en hPa
     print(pression)               # Affichage de la pression
     P.append(pression)            # Ajout de la mesure dans le tableau
 
