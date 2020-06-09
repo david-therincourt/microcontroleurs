@@ -1,6 +1,8 @@
 # STM32F405 Feather Express
 
+![stm32f405_feather](stm32f405_feather.jpg)
 
+![stm32f405_feather_grove](stm32f405_feather_grove.jpg)
 
 ## Firmware MicroPython
 
@@ -22,7 +24,7 @@ Les fonctions sont les mêmes que pour le Pyboard officielle :
 
 ### Nom des broches
 
-Pour connaître le nom des broches de la Nucleo :
+Pour connaître le nom des broches :
 
 ```python
 >>> from pyb import Pin
@@ -32,7 +34,7 @@ Pour connaître le nom des broches de la Nucleo :
 
 
 
-* Entrées/sorties digitales de `"D0"`  à `"D13"`.
+* Entrées/sorties digitales de `"D0"`  à  `"D1" `  et `“D5"`  à `"D13"`.
 * Entrées analogiques  de `"A0"`  à `"A5"`.
 
 ### Led utilisateur
@@ -99,30 +101,42 @@ Pour plus de précision, la tension Vcc a été mesurée au voltmètre.
 
 ### Port I2C
 
-Port I2C présent sur les broches SCL et SDA.
+Bien que la librairie `pyb` dispose d’une classe I2C, il est préférable d’utiliser celle de la librairie `machine` qui est compatible avec toutes les cartes fonctionnant sous MycroPython.
 
-#### Recherche des périphériques
+#### I2C matériel
 
-Bien que la librairie `pyb` dispose d’une classe I2C, il est préférable d’utiliser celle de la librairie `machine` qui est commune à toutes les cartes MycroPython.
+Le port I2C est présent sur les broches SCL et SDA.
 
 ```python
 >>> from machine import I2C 
->>> i2c = I2C(scl="SCL", sda="SDA") # Port I2C
+>>> i2c = I2C(1)    # Port I2C sur SCL et SDA
+>>> i2c.scan()      # Recherche de périphériques
+```
+
+#### I2C logiciel
+
+Il est possible mettre en oeuvre un bus I2C logiciel à partir de deux broches digitales quelconques.
+
+```python
+>>> from machine import I2C 
+>>> i2c = I2C(scl="D5", sda="D6")   # Port I2C logiciel sur D5 et D6
 >>> i2c.scan()                      # Recherche de périphériques
 ```
 
 
 
-#### Exemple : afficheur [GROVE I2C LCD V1.0](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/) 
+#### Afficheur [GROVE I2C LCD V1.0](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/) 
 
 Attention, la version RGB n’est pas compatible 3,3 V !
+
+Copier la librairie `grove_lcd.py` (disponicle [ici](../lib/grove_i2c_lcd/grove_lcd.py)) dans  la mémoire flash de la carte avant d’éxécuter le programme.
 
 ```python
 from machine import I2C
 from grove_lcd import Lcd    # Librairie pour Grove I2C LCD V1.0
 
-i2c = I2C(scl="SCL", sda="SDA") # Port I2C
-lcd = Lcd(i2c,16,2)             # Afficheur LCD 16x2
+i2c = I2C(1)           # Port I2C sur SCL et SDA
+lcd = Lcd(i2c,16,2)    # Afficheur LCD 16x2
 
 lcd.clear()            # Efface l'écran
 lcd.print("Bonjour")   # Ecrit un texte à l'emplacement du curseur
