@@ -45,7 +45,3 @@ Idem PyBoard au format Feather d’Adafruit.
  Microcontrôleur performant de STMicroelectronics programmable en MicroPython. 
 
 [https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html)
-
-
-
-

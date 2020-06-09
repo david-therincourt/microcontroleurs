@@ -107,35 +107,45 @@ Pour plus de précision, la tension Vcc a été mesurée au voltmètre.
 
 ### Port I2C
 
-Port I2C présent sur les broches D14 et D15 de la connectique Arduino ou sur le connecteur I2C du [shield Grove](https://wiki.seeedstudio.com/Base_Shield_V2/) compatible Arduino (Attention : mettre le commutateur sur 3,3 V).
+Bien que la librairie `pyb` dispose d’une classe I2C, il est préférable d’utiliser celle de la librairie `machine` qui est compatible avec toutes les cartes fonctionnant sous MycroPython.
 
-#### Recherche des périphériques
+#### I2C matériel
 
-Bien que la librairie `pyb` dispose d’une classe I2C, il est préférable d’utiliser celle de la librairie `machine` qui est commune à toutes les cartes MycroPython.
+Le port I2C est présent sur les broches SCL (D15) et SDA (D14).
 
 ```python
 >>> from machine import I2C 
->>> i2c = I2C(scl="SCL", sda="SDA") # Port I2C
+>>> i2c = I2C(1)    # Port I2C sur SCL et SDA
+>>> i2c.scan()      # Recherche de périphériques
+```
+
+#### I2C logiciel
+
+Il est possible mettre en oeuvre un bus I2C logiciel à partir de deux broches digitales quelconques.
+
+```python
+>>> from machine import I2C 
+>>> i2c = I2C(scl="D5", sda="D6")   # Port I2C logiciel sur D5 et D6
 >>> i2c.scan()                      # Recherche de périphériques
 ```
 
 
 
-#### Exemple : afficheur [GROVE I2C LCD V1.0](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/) 
+#### Afficheur [GROVE I2C LCD V1.0](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/) 
 
 Attention, la version RGB n’est pas compatible 3,3 V !
+
+Copier la librairie `grove_lcd.py` (disponicle [ici](../lib/grove_i2c_lcd/grove_lcd.py)) dans  la mémoire flash de la carte avant d’éxécuter le programme.
 
 ```python
 from machine import I2C
 from grove_lcd import Lcd    # Librairie pour Grove I2C LCD V1.0
 
-i2c = I2C(scl="SCL", sda="SDA") # Port I2C
-lcd = Lcd(i2c,16,2)             # Afficheur LCD 16x2
+i2c = I2C(1)           # Port I2C sur SCL et SDA
+lcd = Lcd(i2c,16,2)    # Afficheur LCD 16x2
 
 lcd.clear()            # Efface l'écran
 lcd.print("Bonjour")   # Ecrit un texte à l'emplacement du curseur
 lcd.setCursor(0,1)     # Déplace le curseur
-lcd.print("Nucleo")    # Ecrit un texte à l'emplacement du curseur
+lcd.print("Nucleo")   # Ecrit un texte à l'emplacement du curseur
 ```
-
-Ne pas oublier de copier la librairie `grove_lcd.py` (voir répertoire `i2c`) dans  la mémoire flash de la carte  à côté des fichiers `boot.py` et `main.py` .
