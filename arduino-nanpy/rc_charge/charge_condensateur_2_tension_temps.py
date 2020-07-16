@@ -11,7 +11,7 @@ import numpy as np
 port = SerialManager(device='/dev/ttyACM0')     # Sélection du port série (exemple : device = 'COM6')
 uno = ArduinoApi(connection=port)               # Déclaration de la carte Arduino
 
-uno.pinMode(8, uno.OUTPUT)      # Paramétrage de la broche 8 en sortie
+uno.pinMode(8, uno.OUTPUT)    # Paramétrage de la broche 8 en sortie
 n = 30                          # Nombre de points de mesure
 temps = np.zeros(n)             # Tableau temps
 y = np.zeros(n)                 # Tableau ordonnée
@@ -39,7 +39,7 @@ port.close()                    # Fermeture du port série
 t = temps - t0
 u = y*5/1023
 plt.plot(t,u,'r+')
-plt.title("R = 100k et C = 4,7 uF")
+plt.title("R = 10k et C = 4,7 uF")
 plt.xlabel("t(ms)")
 plt.ylabel("uc(V)")
 plt.grid()

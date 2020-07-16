@@ -5,7 +5,7 @@ from time import sleep                       # Importation fonction sleep()
 port = SerialManager(device='/dev/ttyACM0')  # Sélection du port série (exemple : device = 'COM6')
 uno = ArduinoApi(connection=port)            # Déclaration de la carte Arduino Uno
 
-pinLed = 13                            # Led branchée sur broche 11
+pinLed = 2                            # Led branchée sur broche 11
 uno.pinMode(pinLed,uno.OUTPUT)         # Broche Led en sortie
 
 for i in range(100):                   # Boucle : répéter 100 fois

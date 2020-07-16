@@ -1,0 +1,20 @@
+Régler le volume sur 60 mL
+668.9924 hPa
+Régler le volume sur 50 mL
+794.1566 hPa
+Régler le volume sur 40 mL
+988.844 hPa
+Régler le volume sur 35 mL
+1117.3 hPa
+Régler le volume sur 30 mL
+1291.157 hPa
+Régler le volume sur 25 mL
+1523.821 hPa
+V ; P
+mL ; hPa
+60 ; 668.9924
+50 ; 794.1566
+40 ; 988.844
+35 ; 1117.3
+30 ; 1291.157
+25 ; 1523.821

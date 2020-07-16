@@ -3,11 +3,11 @@ from microbit import *
 from math import log
 from grove_lcd import Lcd
 
-# Coefficients de Steinhart-Hart
-A = 1.0832e-3
-B = 2.1723e-4
-C = 3.2770e-7
 Ro = 10e3
+A = 1.0832e-3 # Coefficients de Steinhart-Hart
+B = 2.1723e-4 # ...
+C = 3.2770e-7 # ...
+
 
 i2c.init(freq=100000, sda=pin20, scl=pin19)
 lcd = Lcd(i2c,16,2)

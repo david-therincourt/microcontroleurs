@@ -5,8 +5,9 @@ from pyb import Pin
 from machine import I2C
 from ht16k33_seg import Seg7x4
 
-i2c = I2C(scl = Pin('SCL'), sda = Pin('SDA'))
+i2c = I2C(1)
 aff = Seg7x4(i2c, address = 0x70)
 
-aff.text("47.5")
+aff.fill(0)             # Efface l'affichage précédent
+aff.text("48.5")
 aff.show()

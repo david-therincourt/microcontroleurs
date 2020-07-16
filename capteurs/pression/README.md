@@ -1,6 +1,12 @@
-# Capteurs de pression
+# Capteurs de pression 3,3 V
 
-Capteurs de pression compatibles 3,3 VDC.
+
+
+## Trois types de mesure de pression
+
+* pression **absolue** : valeur mesurée par rapport au vide.
+* pression **manométrique** ou relative (type jauge) : mesure par rapport à la pression atmosphérique.
+* pression **différentielle** : valeur entre deux pressions.
 
 ## Capteurs de pression absolue
 
@@ -67,7 +73,7 @@ Capteurs de pression compatibles 3,3 VDC.
 
 
 * Fabriquant : SMI
-* Pression de fonctionnement : 0 à 40 kPa (40 cm H2O)
+* Pression de fonctionnement : 0 à 3,92 kPa (40 cm H2O)
 * Précision : 1 %
 * Diamètre tube : 3 mm
 * Résolution : 14 bit
